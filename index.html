@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Star Rating</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+<h2>How was your experience?</h2>
+<p>Tap a star</p>
+
+<div class="stars">
+<span onclick="rate(1)">★</span>
+<span onclick="rate(2)">★</span>
+<span onclick="rate(3)">★</span>
+<span onclick="rate(4)">★</span>
+<span onclick="rate(5)">★</span>
+</div>
+
+<div id="good" class="hidden">
+<button onclick="goReview()">Leave Google Review</button>
+</div>
+
+<div id="bad" class="hidden">
+<h3>Send Feedback</h3>
+<input placeholder="Mobile">
+<input placeholder="Email">
+<textarea placeholder="Your feedback"></textarea>
+<button onclick="thanks()">Submit</button>
+</div>
+
+</div>
+
+<script>
+function rate(s){
+if(s>=4){
+document.getElementById("good").classList.remove("hidden")
+}
+else{
+document.getElementById("bad").classList.remove("hidden")
+}
+}
+
+function goReview(){
+window.location.href="https://search.google.com/local/writereview"
+}
+
+function thanks(){
+document.body.innerHTML="<h2>Thank you for feedback</h2>"
+}
+</script>
+
+</body>
+</html>

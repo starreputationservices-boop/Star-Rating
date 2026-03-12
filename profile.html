@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+<h2>Business Profile</h2>
+
+<p id="email"></p>
+<p id="qr"></p>
+
+<button onclick="downloadQR()">Download QR</button>
+
+</div>
+
+<script>
+let email=localStorage.getItem("user")
+let qr=localStorage.getItem("qr")
+
+document.getElementById("email").innerText="Email: "+email
+document.getElementById("qr").innerText="QR Code: "+qr
+
+function downloadQR(){
+alert("QR download feature placeholder")
+}
+</script>
+
+</body>
+</html>
